@@ -1,0 +1,20 @@
+.sidebar{
+    padding: 10px;
+    width:13%;
+    background-color:#191320 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__top{
+    flex: 1;
+}
+
+.sidebar__top>h5 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sidebar__top {
+    display: inline;
+}
