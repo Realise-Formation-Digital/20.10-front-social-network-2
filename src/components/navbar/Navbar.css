@@ -1,0 +1,7 @@
+#navbar {
+    display: flex;
+    grid-area: navbar;
+    background-color: #191320;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}

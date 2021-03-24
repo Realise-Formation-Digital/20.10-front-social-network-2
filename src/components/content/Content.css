@@ -1,0 +1,68 @@
+#content {
+    padding: 0px 30px;
+    padding-top: 25px;
+    background-color: #0e0e10;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+#content .video-slideshow {
+    position: relative;
+    height: 130px;
+    width: 100%;
+    align-self: auto;
+}
+
+#content .video-slideshow>.icon-button:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+}
+
+#content .video-slideshow>.icon-button:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+}
+
+#content .video-slideshow>.video {
+    position: absolute;
+    left: calc(50% - 310px);
+    transition: all 300ms ease-in-out;
+}
+
+#content .video-slideshow>.video-left-car {
+    z-index: 1;
+    transform: translateX(-25%);
+    scale: 0.35;
+}
+
+#content .video-slideshow>.video-center-car {
+    z-index: 2;
+}
+
+#content .video-slideshow>.video-right-car {
+    z-index: 1;
+    transform: translateX(25%);
+    scale: 0.35;
+}
+
+#content .channels {
+    margin-top: 30px;
+}
+
+#content .channels>.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#content .channels .videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 85px;
+}
+
+#content .channels .videos .video-bottom video {
+    width: 100%;
+}

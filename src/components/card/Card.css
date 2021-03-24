@@ -1,0 +1,126 @@
+.card {
+    display: flex;
+}
+
+.card .tags-menu {
+    display: grid;
+}
+
+.card-container {
+    flex-direction: column;
+}
+
+.card-container .card-wrapper {
+    position: relative;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.card-container .card-wrapper:hover {
+    cursor: pointer;
+}
+
+.card-container .card-wrapper .left-bar-side {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: var(--shadow-size);
+    transform: scaleX(0);
+    background-color: var(--primary-color);
+    transition: all 100ms linear;
+    transform-origin: 0px 100% 0px;
+}
+
+.card-container .card-wrapper:hover .left-bar-side {
+    transform: scaleX(1);
+}
+
+.card-container .card-wrapper .left-bar-side::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top: var(--shadow-size) solid transparent;
+    border-right: var(--shadow-size) var(--primary-color);
+    border-bottom: var(--shadow-size) solid transparent;
+    transform: translateY(calc(-1 * var(--shadow-size))) scale(0);
+    transform-origin: left center 0px;
+    transition: all 100ms linear;
+}
+
+.card-container .card-wrapper:hover .left-bar-side::before {
+    transform: translateY(calc(-1 * var(--shadow-size))) scale(1);
+}
+
+.card-container .card-wrapper .bottom-bar-side {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: var(--shadow-size);
+    transform: scaleY(0);
+    background-color: var(--primary-color);
+    transition: all 100ms linear;
+    transform-origin: 0px 100% 0px;
+}
+
+.card-container .card-wrapper:hover .bottom-bar-side {
+    transform: scaleY(1);
+}
+
+.card-container .card-wrapper .bottom-bar-side::before {
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-left: var(--shadow-size) solid transparent;
+    border-top: var(--shadow-size) var(--primary-color);
+    border-right: var(--shadow-size) solid transparent;
+    transform: translateX(var(--shadow-size)) scale(0);
+    transform-origin: center bottom 0px;
+    transition: all 100ms linear;
+}
+
+.card-container .card-wrapper:hover .bottom-bar-side::before {
+    transform: translateX(var(--shadow-size)) scale(1);
+}
+
+.card-container .card-wrapper .card {
+    transition: all 100ms linear;
+}
+
+.card-container .card-wrapper:hover .card {
+    transform: translate(var(--shadow-size), calc(-1 * var(--shadow-size)));
+}
+
+.card-container .tags-menu {
+    grid-template-areas: "profile-picture title" "profile-picture username" ". category" ". tags";
+    grid-template-columns: 64px auto;
+    grid-template-rows: 20px 20px 20px auto;
+}
+
+.card-container .tags-menu .category {
+    grid-area: category;
+    color: #a1a1a1;
+    font-size: 0.85rem;
+}
+
+.card-container .tags-menu .category:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.card-container .tags-menu .tags {
+    grid-area: tags;
+}
+
+.card-container .tags-menu .tags>.button {
+    margin: 0px 2px;
+    margin-top: 5px;
+}
+
+.card-container .tags-menu .tags>.button:first-of-type {
+    margin-right: 2px;
+}
